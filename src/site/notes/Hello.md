@@ -1,6 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/Hello/","tags":["gardenEntry"]}
+{"dg-publish":true,"dg-home":true,"permalink":"/Hello/","tags":["gardenEntry"],"dgPassFrontmatter":true}
 ---
 
 
-hey
+hey![Pasted image 20260208125842.png](/img/user/Pasted%20image%2020260208125842.png)
