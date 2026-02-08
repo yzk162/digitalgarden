@@ -33,4 +33,58 @@ int main()
 }
 ```
 
+## 引用
+引用必须引用真实存在的变量。
+引用本身不是变量，它不占用内存。
+```cpp
+int a = 5;
+int* b = &a;
+//&符号在类型旁边，是一个引用。
+int& ref = a;
+ref = 2;
+LOG(a);
+```
+上面的代码段中，等于说给a起了一个小名ref。
+
+```cpp
+void Increment(int* value)
+{
+	(*value)++;
+}
+
+int main()
+{
+	int a = 5;
+	Increment(&a);
+	LOG(a);
+
+	
+	std::cin.get();
+}
+```
+输出a=6。
+```cpp
+int main()
+{
+	int a = 5;
+	int b = 8;
+	//创建引用，必须赋值。
+	int& ref = a;
+	ref = b;
+	Increment(a);
+	LOG(a);
+	LOG(b);
+	
+	std::cin.get();
+}
+```
+
+
+## 面向对象编程
+### c++类
+类用于整理格式，便于维护，用类实现的功能，不用类完全可以实现。
+
+类与结构体的区别：
+通常，类内变量函数是私有的，而结构体是公有的。
+但是它们技术上没有区别。
 
