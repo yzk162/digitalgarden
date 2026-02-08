@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"title":"cpp","dg-show-toc":true,"permalink":"/c++学习/cpp/","dgShowToc":true,"dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/c++学习/cpp/","dgPassFrontmatter":true}
 ---
 
 开始了。
