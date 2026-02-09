@@ -102,3 +102,60 @@ struct Entity
 	}
 };
 ```
+
+静态局部变量
+函数局部变量：每个函数独有，外界无法访问，且函数执行结束后保留。
+```cpp
+#include <iostream>
+
+void Function()
+{
+	static int i = 0;
+	i++;
+	std::cout << i << std::endl;
+
+}
+
+int main()
+{
+	Function();
+	Function();
+	Function();
+	Function();
+	std::cin.get();
+}
+```
+相当于外部无法访问改变i。
+
+
+【23】节听得有点懵。
+这段程序很厉害
+```cpp
+#include <iostream>
+
+class Singleton
+{
+public:
+	static Singleton& Get()
+	{
+		static Singleton instance;
+		return instance;
+	}
+	void Hello()
+	{ 
+		std::cout << "hello" << std::endl;
+	}
+};
+
+int main()
+{
+	Singleton::Get().Hello();
+	std::cin.get();
+}
+```
+看懂了，等于 static Singleton instance;这句话把创造的对象的生存周期延长到永远，然后可以一直存在调用。
+
+类的学习先告一段落，感觉有点不懂。
+
+### 枚举
+
