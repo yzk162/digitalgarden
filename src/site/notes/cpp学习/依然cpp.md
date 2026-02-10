@@ -174,3 +174,72 @@ enum Example
 };
 ```
 这时候就是5 6 7递增。
+
+枚举等于是用整数值来表示想要表示的东西。
+
+用枚举爆改昨天的代码。
+```cpp
+#include <iostream>
+
+int a = 5;
+void function()
+{
+
+}
+
+
+class Log
+{
+public:
+	enum Level
+	{
+		LogLevelError,
+		LogLevelWarning,
+		LogLevelInfo
+	};
+	
+
+private:
+	Level m_Level= LogLevelInfo;
+
+public:
+	void SetLevel(Level level)
+	{
+		m_Level = level;
+	}
+
+	void Error(const char* message)
+	{
+		if (m_Level >= LogLevelError)
+			std::cout << "[ERROR]:" << message << std::endl;
+	}
+
+	void Warn(const char* message)
+	{
+		if (m_Level >= LogLevelWarning)
+			std::cout << "[WARNING]:" << message << std::endl;
+	}
+
+	void Info(const char* message)
+	{
+		if (m_Level >= LogLevelInfo)
+			std::cout << "[INFO]:" << message << std::endl;
+	}
+
+};
+
+
+
+
+int main()
+{
+	Log log;
+	log.SetLevel(log.LogLevelWarning);
+	log.Warn("Hello!");
+	log.Info("Hello!");
+	log.Error("Hello!");
+
+
+	std::cin.get();
+}
+```
